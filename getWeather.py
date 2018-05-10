@@ -1,4 +1,4 @@
-#################################################################################
+#################################################################################A
 # Authors: Chris Given, Anna Weeks, Landon Rawson
 # Date: 5/3/18
 # Description: Gets the current relevant weather data from the API below
@@ -8,6 +8,7 @@ import requests
 import sys
 
 # ---- IMPORTANT VALUES ---- #
+# rainData
 # windSpeed, windDirection
 # tempMaxData, tempMinData
 # descriptionData
@@ -33,7 +34,10 @@ def getData():
     # Gets the rain chance from the Dark Sky API
     response = requests.get("https://api.darksky.net/forecast/{}/{},{}".format(DSKey, latitude, longitude))
     response = response.json()
-    rainChance = response["minutely"]["data"][0]["precipProbability"]
+    rainData = []
+    rainData.append(response["currently"]["precipProbability"]*100)
+    for i in range(3):
+        rainData.append(response["daily"]["data"][1+i]["precipProbability"]*100)
 
     response = requests.get("http://api.openweathermap.org/data/2.5/forecast?lat={}&lon={}&APPID={}".format(latitude, longitude, OWMKey))
     response = response.json()
@@ -67,4 +71,4 @@ def getData():
         tempMinData[i] = (int(tempMinData[i]) - 273) * 9 / 5 + 32
         tempMaxData[i] = (int(tempMaxData[i]) - 273) * 9 / 5 + 32 
 
-    return windSpeed, windDirection, tempMaxData, tempMinData, descriptionData, imageData
+    return rainData, windSpeed, windDirection, tempMaxData, tempMinData, descriptionData, imageData
