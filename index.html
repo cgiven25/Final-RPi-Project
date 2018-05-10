@@ -3,59 +3,59 @@
 <head>
 <title>
 </title>
-<meta http-equiv="refresh" content="60" />
+<!--<meta http-equiv="refresh" content="60" />-->
 </head>
 <body>
 
-<table border="10" cellspacing="0" width = "100%" style="border: black; color: black; font-size: 25px" bgcolor="white">
+<table border="10" cellspacing="0" width = "100%" style="border: white; color: white; font-size: 25px" bgcolor="black">
 	<tr>
-		<th colspan="4"> 
-			<p id = "date"></p>
-			<script>document.getElementById("date").innerHTML = Date();</script>
-		</th>
+		<td colspan="4"> 
+			
+			<!--<p id = "date"></p>
+			<script>document.getElementById("date").innerHTML = Date();</script>-->
+		</td>
 	</tr>
 	<tr>
-		<td colspan="2" width = "50%" rowspan="4" style="font-size: 60px" align="center">65 F</td>
+		<td colspan="2" width = "50%" rowspan="4" style="font-size: 60px" align="center">{{temperature}} F°</td>
 	</tr>
 	<tr>
-		<td align="right" style="border-right:black">Windspeed:  </td>
-		<td align="center" style="border-left:black">
+		<td align="right" style="border-right:black">Windspeed: </td>
+		<td align="center" style="border-left:black">{{windspeed}} mph
 <!-- embed tag example: problem: can't change font size -->
-			<embed src="info.txt" height="40" width="100">
+			<!--<embed src="info.txt" height="40" width="100">-->
 		</td>
 	</tr>
 	<tr>
 		<td align="right" style="border-right:black">Direction:  </td>
-		<td align="center" style="border-left:black">
-			
+		<td align="center" style="border-left:black">{{direction}}	
 		</td>
 	</tr>
 	<tr>
 		<td align="right" style="border-right:black">Humidity:  </td>
-		<td align="center" style="border-left:black">72%</td>
+		<td align="center" style="border-left:black">{{humidity}}%</td>
 	</tr>
 	<tr>
-		<td align="center">Today:</td>
-		<td align="center">Sunday:</td>
-		<td align="center">Monday:</td>
-		<td align="center">Tuesday:</td>
+		<td align="center" style="border-bottom:black">Today:</td>
+		<td align="center" style="border-bottom:black">{{1day}}:</td>
+		<td align="center" style="border-bottom:black">{{2days}}:</td>
+		<td align="center" style="border-bottom:black">{{3days}}:</td>
 	</tr>
 	<tr>
-		<td width="25%" align = "center"><img src="sunny.jpg" alt="sunny"></td>
-		<td width="25%" align = "center"><img src="sunny.jpg" alt="sunny"></td>
-		<td width="25%" align = "center"><img src="sunny.jpg" alt="sunny"></td>
-		<td width="25%" align = "center"><img src="sunny.jpg" alt="sunny"></td>
+		<td width="25%" align = "center" style="border-top:black"><img src="sunny.jpg" alt="sunny"></td>
+		<td width="25%" align = "center" style="border-top:black"><img src="sunny.jpg" alt="sunny"></td>
+		<td width="25%" align = "center" style="border-top:black"><img src="sunny.jpg" alt="sunny"></td>
+		<td width="25%" align = "center" style="border-top:black"><img src="sunny.jpg" alt="sunny"></td>
 	</tr>
 	<tr align="center">
-		<td>20 F / 17 F</td>
-		<td>19 F / 10 F</td>
-		<td>13 F / 8 F</td>
-		<td>14 F / 6 F</td>
+		<td>{{todayHigh}} F / {{todayLow}} F</td>
+		<td>{{1High}} F / {{1Low}} F</td>
+		<td>{{2High}} F / {{2Low}} F</td>
+		<td>{{3High}} F / {{3Low}} F</td>
 	</tr>
 	<tr align="center">
-		<td>0%</td>
-		<td>100%</td>
-		<td>20%</td>
-		<td>0%</td>
+		<td>{todayPrecip}}%</td>
+		<td>{{1Precip}}%</td>
+		<td>{{2Precip}}%</td>
+		<td>{{3Precip}}%</td>
 </body>
 </html>
