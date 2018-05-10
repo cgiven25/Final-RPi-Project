@@ -67,3 +67,4 @@ def getData():
         tempMinData[i] = (int(tempMinData[i]) - 273) * 9 / 5 + 32
         tempMaxData[i] = (int(tempMaxData[i]) - 273) * 9 / 5 + 32 
 
+    return windSpeed, windDirection, tempMaxData, tempMinData, descriptionData, imageData
