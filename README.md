@@ -6,15 +6,14 @@ Some of the capabilities come from a Raspberry Pi model 3B+.  These include:
   Humidity
 
 The other information is found by polling two APIs:
-  Dark Sky API (this app is powered by the Dark Sky: https://darksky.net/poweredby/)
-  Openweathermap
+  Dark Sky API (this app is powered by the Dark Sky: https://darksky.net/poweredby/) and Openweathermap
   
   Openweathermap provided us with:
-    Wind speed
-    Wind Direction
-    Descriptions of the weather
-    Images to match descriptions
+    Wind speed,
+    Wind Direction,
+    Descriptions of the weather,
+    Images to match descriptions.
   
   Dark Sky provided us with:
-    Chance of precipitation
-    Temperature High and Low
+    Chance of precipitation,
+    Temperature High and Low,
