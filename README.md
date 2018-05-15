@@ -16,4 +16,8 @@ The other information is found by polling two APIs:
   
   Dark Sky provided us with:
     Chance of precipitation,
-    Temperature High and Low,
+    Temperature High and Low
+ 
+Note: The singular app.py file listed in the repo will not work without a SenseHat for the Raspberry Pi.
+
+webapp.zip has some external dependencies: Flask and requests libraries for Python and the two API keys used to poll the APIs.  I'm not posting them because my account can be locked/charged for excessive polling.
